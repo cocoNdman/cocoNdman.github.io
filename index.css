@@ -1,0 +1,47 @@
+body {
+    background-color: lightpink;
+    color: tomato;
+}
+
+.titles {
+    background-color: antiquewhite;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box
+}
+
+.title {
+    text-align: center;
+}
+
+.row {
+    margin: 1% 0
+}
+
+#copyright {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width:400px) {
+    .container {
+        width: 85%;
+        padding: 0
+    }
+}
+
+@media (min-width:550px) {
+    .container {
+        width: 80%
+    }
+}
