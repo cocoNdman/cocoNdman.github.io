@@ -164,3 +164,9 @@ img {
     color: tomato;
     font-weight: bold;
 }
+
+#bday {
+    clear: both;
+    color: tomato;
+    text-decoration: none;
+}

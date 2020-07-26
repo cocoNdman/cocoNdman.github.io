@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Coco&Damin</title>
+    <link rel="icon" href="./res/shiba.jpeg">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./letter.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="flex-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="container content">
+                    <div id="btn">
+                        <h1>生日大礼包</h1>
+                        <button class="btn btn-outline-light" onclick="typeWriter()">让你瞅瞅我弄的啥</button>
+                    </div>
+                    <p id="para1" style="color: #fff;"></p>
+                    <p id="para2" style="color: #fff;"></p>
+                    <p id="para3" style="color: #fff;"></p>
+                    <p id="para4" style="color: #fff;"></p>
+                    <p id="para5" style="color: #fff;"></p>
+                    <p id="para6" style="color: #fff;"></p>
+                    <p id="para7" style="color: #fff;"></p>
+                </div>
+
+                <div class="img-item col-md-12">
+                    <img class="img" src="./res/coco2ndbday.JPG">
+                </div>
+
+                <div class="container item-content">
+                    <ul class="gift-list">
+                        <li class="gift-item">Tiffany.Co一个</li>
+                        <li class="gift-item">按摩券一张</li>
+                        <li class="gift-item">亲亲一个</li>
+                    </ul>
+                </div>
+
+                <div class="container fixed-bottom audio">
+                    <audio controls autoplay>
+                        <source src="./res/bdaysong.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var i = 0;
+    var j = 0;
+    var a = 0;
+    var b = 0;
+    var c = 0;
+    var d = 0;
+    var e = 0;
+    var txt1 = '亲爱的娟（咦~）：'
+    var txt2 = '经过层层筛选，你有的和你没有的，我发现了一个巨大的惊喜，为什么是惊喜呢，因为这个东西现在应该不流行了，比较old school，所以现在拿出来送给你应该是惊喜，而且这个惊喜我以前都没有送过（送过就不叫惊喜了），所以我觉得在今天送给你应该很合适，那么，这个惊喜就是......我从来没给你写过的情书哈哈哈！';
+    var txt3 = '我亲爱的宝贝，在你看到这封信的时候，我们应该已经是情侣了。转眼间一年多过去了，回顾过去的时光，发现充满了恋爱的甜味。你对我来说，是能够陪伴左右的恋人，伤心难过时借个肩膀靠，还看过我哭的人，跟你在一起的时光总是充满了欢乐。曾经我以为恋爱这种东西跟我没什么关系，而面瘫又成功让我和爱情越来越远，可当我见到你的时候，看着坚固的外壳却裂开了一条小缝，而你也慢慢走进我心里。';
+    var txt4 = '拜琼瑶剧和言情小说所赐，以前的我心里想的都是轰轰烈烈感天动地的爱情，什么为了就女生自己跑路中间被车撞一下还不死，什么大半夜小巷子里以一敌百赶跑小混混，直到遇到了你，我才发现爱情也可以像溪水一样缓缓灌溉干涸的心灵。我很庆幸遇到了你，遇到了那个让我变得更好的你。除了恋人，你又是我的良师益友，敢于直言我的不足和缺点，又耐得住性子潜移默化帮我改正。因为你，躁动的心能安稳下来，暴躁的脾气能收敛起来，迷茫的时候能有努力的目标。';
+    var txt5 = '曾经做为一个毫无娱乐活动的单身男性，却成功被你说服（强拉着）涂指甲油、看综艺、做任何情侣能做的事情，我太幸福啦！而我也憧憬着以后能平心静气教会你开车以及帮你养成健身的习惯。有句话不是说嘛，美好的爱情在于两个人都在进步，所以等老了，我就看着你写代码顺便帮你抹护发素，你抱着小猫小狗看着我报税算账（这段删掉）。';
+    var txt6 = '从小到大语文就不好，没记住多少华丽的辞藻，只能用直白且质朴的文笔，告诉你宝贝我爱你。以后会有艰难困苦，有你在身边我就能勇往直前，见过彼此不能示人的模样，将来每天都会是神仙颜值。最后，请珍惜每年仅存的6个月时间，这是你唯一能喊我弟弟的机会。祝宝贝生日快乐，永远18岁。';
+    var txt7 = '爱你的骚骚猪';
+    var speed = 40;
+
+    function typeWriter() {
+        if (i < txt1.length) {
+            document.getElementById("para1").innerHTML += txt1.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+
+        if (i == txt1.length) {
+            if (j < txt2.length) {
+                document.getElementById("para2").innerHTML += txt2.charAt(j);
+                j++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        if (j == txt2.length) {
+            if (a < txt3.length) {
+                document.getElementById("para3").innerHTML += txt3.charAt(a);
+                a++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        if (a == txt3.length) {
+            if (b < txt4.length) {
+                document.getElementById("para4").innerHTML += txt4.charAt(b);
+                b++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        if (b == txt4.length) {
+            if (c < txt5.length) {
+                document.getElementById("para5").innerHTML += txt5.charAt(c);
+                c++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        if (c == txt5.length) {
+            if (d < txt6.length) {
+                document.getElementById("para6").innerHTML += txt6.charAt(d);
+                d++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        if (d == txt6.length) {
+            if (e < txt7.length) {
+                document.getElementById("para7").innerHTML += txt7.charAt(e);
+                e++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    }
+</script>
+
+</html>
